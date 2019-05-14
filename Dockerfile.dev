@@ -1,0 +1,6 @@
+
+FROM openjdk:8
+WORKDIR '/app'
+COPY target/backend-app.jar .
+EXPOSE 8080
+CMD ["mvn", "test"]
