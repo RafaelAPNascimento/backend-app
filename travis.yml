@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t rafaelnasc1mento/backend-app -f Dockerfile.dev .
+
+script:
+  - docker run rafaelnasc1mento/backend-app mvn test -- --coverage

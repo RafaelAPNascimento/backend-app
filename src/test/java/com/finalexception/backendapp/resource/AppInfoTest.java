@@ -29,6 +29,6 @@ public class AppInfoTest {
 		 
 		mockMvc.perform(MockMvcRequestBuilders.get("/info"))
 					.andExpect(MockMvcResultMatchers.status().isOk())
-					.andExpect(MockMvcResultMatchers.content().string("Infox"));														
+					.andExpect(MockMvcResultMatchers.content().string("Info"));														
 	}
 }
