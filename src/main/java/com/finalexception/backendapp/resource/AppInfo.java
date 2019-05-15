@@ -10,7 +10,7 @@ public class AppInfo {
 	
 	@GetMapping
 	public String getInfo() {
-		return "Info";
+		return "App Info";
 	}
 
 }
