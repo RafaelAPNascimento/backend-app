@@ -8,3 +8,17 @@ before_install:
 
 script:
   - docker run rafaelnasc1mento/backend-app mvn test
+  
+deploy:
+  # travis comes pre-configured with a bunch of cloud providers
+  provider: elasticbeanstalk  
+  region: "sa-east-1"
+  app: "backend-app"
+  environment: "BackendApp-env"
+  bucket-name: elasticbeanstalk-sa-east-1-423672971386
+  bucket-path: "backend-app"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
