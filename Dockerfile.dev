@@ -5,4 +5,4 @@ RUN apt-get install -y maven
 COPY pom.xml /app/pom.xml
 COPY src /app/src
 WORKDIR /app
-#RUN mvn test
+RUN mvn test
